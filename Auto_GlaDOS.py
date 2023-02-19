@@ -10,6 +10,9 @@ from lxml import etree
 import time
 import poplib
 
+EMAIL = "邮箱"         # input('Email: ')
+PASSWORD = "授权码"       # input('Password: ')
+
 url = 'https://glados.rocks/console/checkin'
 # 浏览器启动选项
 option = webdriver.ChromeOptions()
@@ -23,14 +26,14 @@ browser.get(url)
 
 browser.find_element(By.LINK_TEXT, 'Login').click()
 browser.find_element(By.XPATH, '//button[contains(text(),"Login")]').click()
-browser.find_element(By.ID, 'email').send_keys("邮箱")
+browser.find_element(By.ID, 'email').send_keys(EMAIL)
 browser.find_element(By.XPATH, '//button[contains(text(),"send access code to email")]').click()  # 发送验证码
 time.sleep(10)
 
 # 输入邮件地址, 口令和POP3服务器地址:
-email = '邮箱'  # input('Email: ')
-password = '授权码'  # input('Password: ')
-pop3_server = 'pop.qq.com'  # input('POP3 server: ') # 邮箱服务器
+email = EMAIL
+password = PASSWORD
+pop3_server = 'pop.qq.com'  # input('POP3 server: ')    # pop3服务器，可根据不同邮箱自行修改
 result = ""
 
 
