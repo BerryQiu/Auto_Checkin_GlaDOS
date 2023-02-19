@@ -7,4 +7,5 @@ GlaDOS自动签到脚本
 
 chromrdriver.exe下载地址：https://sites.google.com/chromium.org/driver/home
 
-在EMAIL中填入邮箱,PASSWORD中填入密码。默认是QQ邮箱，如果是126或者别的修改一下后面的pop3服务器即可（不同邮箱的服务器可自行百度）。
+在EMAIL中填入邮箱,PASSWORD中填入**授权码**，注意是授权码不是密码！就是很长很复杂的那个！默认是QQ邮箱，如果是126或者别的修改一下后面的pop3服务器即可（不同邮箱的服务器可自行百度）。
+
